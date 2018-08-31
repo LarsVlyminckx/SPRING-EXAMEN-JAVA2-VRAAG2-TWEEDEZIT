@@ -37,7 +37,7 @@ public class Exam {
 	// 1 punt
 	public int countChar(List<String> names, String s) {
 		return (int) names.stream()
-				
+				.filter(l -> l.toLowerCase().contains(s.toLowerCase()))
 				.count();
 	}
 	
@@ -45,6 +45,10 @@ public class Exam {
 	// te vinden
 	// 2 punten
 	public int getMaxY(List<Point> points) {
-		return 0;
+		
+		return points.stream()
+				.mapToInt(p -> p.y)
+				.max()
+				.orElse(0);
 	}	
 }

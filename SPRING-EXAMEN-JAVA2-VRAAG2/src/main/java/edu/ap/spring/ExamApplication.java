@@ -1,6 +1,8 @@
 package edu.ap.spring;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -21,20 +23,18 @@ public class ExamApplication {
 		
 		Exam exam = new Exam();
 		
-		int[] intArray = new int[] { 11, 12, 13, 20, 25, 30, 37, 41, 50, 62, 78 };
-		int[] result = exam.getTimesTwo(intArray);
-		int[] expected = { 12, 20, 30, 50, 62, 78 };
-		if(Arrays.equals(result, expected)) {
-			System.out.println("Correct!");
-		}	
+		List<String> result3 = new ArrayList<String>();
+
+		result3.add("Sandra");
+		result3.add("Elke");
+		result3.add("Katlien");
+		result3.add("Kathleen");
+		result3.add("Kirsten");
 		
-		int result2 = exam.countUppercaseCharacters("WiE hEEft ER examENstress?");
-		if(result2 == 8) {
-			System.out.println("Correct!");
-		}
 		
-		int result3 = exam.countChar(this.makeNamesList(), "e");
-		if(result3 == 6) {
+		int result4 = exam.countChar(result3, "e");
+		System.out.println(result4);
+		if(result4 == 6) {
 			System.out.println("Correct!");
 		}
 	}
