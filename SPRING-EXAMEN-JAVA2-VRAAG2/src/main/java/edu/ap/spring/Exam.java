@@ -2,11 +2,7 @@ package edu.ap.spring;
 
 import java.awt.Point;
 import java.util.*;
-import java.util.stream.Collectors;
 import java.util.stream.IntStream;
-import java.util.stream.LongStream;
-import java.util.stream.Stream;
-
 import org.springframework.stereotype.Component;
 
 @Component
@@ -37,7 +33,7 @@ public class Exam {
 	// 1 punt
 	public int countChar(List<String> names, String s) {
 		return (int) names.stream()
-				.filter(l -> l.toLowerCase().contains(s.toLowerCase()))
+				.filter(e -> e.toLowerCase().contains(s.toLowerCase()))
 				.count();
 	}
 	
